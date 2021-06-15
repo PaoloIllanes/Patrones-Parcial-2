@@ -1,12 +1,10 @@
 package strategy.ejercicio;
 
-import strategy.basic.IStrategy;
-
 import java.util.ArrayList;
 
 public class Database {
     private ArrayList<Empleado> empleados;
-    private IStrategy strategy;
+    private IOrdenamiento strategy;
 
     public ArrayList<Empleado> getEmpleados() {
         return empleados;
@@ -16,16 +14,16 @@ public class Database {
         this.empleados = empleados;
     }
 
-    public IStrategy getStrategy() {
+    public IOrdenamiento getStrategy() {
         return strategy;
     }
 
-    public void setStrategy(IStrategy strategy) {
+    public void setStrategy(IOrdenamiento strategy) {
         this.strategy = strategy;
     }
 
     public void execute(){
-        this.strategy.execute();
+        this.strategy.execute(this);
     }
 
 }

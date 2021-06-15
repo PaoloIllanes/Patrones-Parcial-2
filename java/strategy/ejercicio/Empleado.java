@@ -4,8 +4,15 @@ package strategy.ejercicio;
 public class Empleado {
     private int date;
     private int ci;
-    private int profesion;
+    private String profesion;
     private String nombre;
+
+    public Empleado(int date, int ci, String profesion , String nombre){
+        this.date= date;
+        this.ci= ci;
+        this.profesion= profesion;
+        this.nombre= nombre;
+    }
 
     public int getDate() {
         return date;
@@ -23,11 +30,11 @@ public class Empleado {
         this.ci = ci;
     }
 
-    public int getProfesion() {
+    public String getProfesion() {
         return profesion;
     }
 
-    public void setProfesion(int profesion) {
+    public void setProfesion(String profesion) {
         this.profesion = profesion;
     }
 
